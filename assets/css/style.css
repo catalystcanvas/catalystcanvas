@@ -16,7 +16,7 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -33,6 +33,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, transparent 20%, #149279);
     position: absolute;
+    z-index: 0;
   }
   
   .circle.one {
@@ -209,7 +210,7 @@
     font-size: 0.95rem;
   }
   
-  .icon {
+  .iconn {
     width: 28px;
     margin-right: 0.7rem;
     margin-top: -7px;
@@ -365,7 +366,7 @@
       line-height: 30px;
     }
   
-    .icon {
+    .iconn {
       width: 23px;
     }
   
@@ -381,4 +382,79 @@
 .form .information p{
   margin-top: 10px;
 
+}
+
+/* ///////form pop-up//// */
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Hidden by default */
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  animation: fadeIn 0.5s ease-in-out;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Popup animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.popup span {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #f56d6d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #c45050;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .popup span {
+    font-size: 1rem;
+  }
+
+  .popup button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
 }

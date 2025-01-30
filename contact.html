@@ -8,9 +8,11 @@
   <title>Contact us</title>
   <meta content="" name="">
   <meta content="" name="">
+  <meta name="description" content="Boost your business growth with our expert digital marketing services. Specializing in SEO, search engine marketing, and targeted ads on platforms like Google, Facebook, Instagram, and TikTok. Let us help you achieve your marketing goals today!">
+
 
     <!-- Favicons -->
-    <link href="images/favicon.png" rel="icon">
+    <link href="images/favicon.webp" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -28,6 +30,16 @@
   <link href="assets/css/edited.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-92845007Q1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-92845007Q1');
+</script>
+
    <style>
    #header {
     position:relative;
@@ -43,7 +55,7 @@
       <header id="header" class="header d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
           <a href="index.html" class="logo d-flex align-items-center">
-            <img src="images/catalyst-upper.PNG" class="img-fluid" alt="logo Header">
+            <img src="images/catalyst-upper.webp" class="img-fluid" alt="logo Header">
           </a>
           <nav id="navbar" class="navbar">
             <ul>
@@ -64,7 +76,7 @@
 
       <div class="containeer">
         <span class="big-circle"></span>
-        <img src="images/shape.png" class="square" alt="" />
+        <img src="images/shape.webp" class="square" alt="big-cicle shape" />
         <div class="form">
           <div class="contact-info">
             <h3 class="title">How can we help?</h3>
@@ -74,16 +86,16 @@
   
             <div class="info">
               <div class="information">
-                <img src="images/location.png" class="icon icon2" alt="" />
+                <img src="images/location.webp" class="iconn icon2" alt="location icon" />
                 <p>4th Floor , Bhamasha Techno Hub , Malviya Nagar 
-                    Jaipur, Rajasthan</p>
+                    Jaipur, Rajasthan (302017)</p>
               </div>
               <div class="information">
-                <a href="mailto:info@catalystcanvas.co"><img src="images/email.png" class="icon" alt="" /></a>
+                <a href="mailto:info@catalystcanvas.co"><img src="images/email.webp" class="iconn" alt="" /></a>
                 <p>info@catalystcanvas.co</p>
               </div>
               <div class="information">
-                <a href="https://wa.me/7665127830"><img src="images/phone.png" class="icon" alt="" /></a>
+                <a href="https://wa.me/7665127830"><img src="images/phone.webp" class="iconn" alt="" /></a>
                 <p>+91 7665127830</p>
               </div>
             </div>
@@ -106,9 +118,7 @@
                 <span>Email</span> -->
               </div>
               <div class="input-container">
-                <input type="tel" name="Phone" class="input" placeholder="Phone No" required/>
-                <!-- <label for="">Phone</label>
-                <span>Phone</span> -->
+                <input type="tel" id="phone" name="Phone" class="input" placeholder="Phone No" required pattern="[0-9]+" title="Please enter only numbers."/>
               </div>
               <div class="input-container">
                 <input type="text" name="Company" class="input" placeholder="Comapany Name" />
@@ -125,13 +135,19 @@
           </div>
         </div>
       </div>
+      <!-- ////////form pop-up///////// -->
+      <div class="popup-overlay" id="popup-overlay"></div>
+      <div class="popup" id="popup">
+        <span>Thank you! We’ll get back to you soon.</span>
+        <button id="popup-close">Close</button>
+      </div>
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
       <div class="footer-top" data-aos="fade-in">
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-in">
-              <img style="width: 350px;" src="images/catalyst-upper.PNG" alt="">
+              <img style="width: 350px;" src="images/catalyst-upper.webp" alt="footer logo">
             </div>
 
             <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-in">
@@ -154,7 +170,7 @@
               <div class="social-links">
                 <a href="#" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/catalystcanvas.co?igsh=MWw3ZTh4eGZvZm8xdw== " class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/105646314/admin/dashboard/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>

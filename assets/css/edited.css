@@ -239,7 +239,10 @@ Custom
   .about-3 {
     padding: 100px 15px;
   }
-
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
   .about-3 .about-content {
     padding-top: 20px;
   }
@@ -291,11 +294,6 @@ Custom
   }
 }
 
-/*.about-4 .container {
-  box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
-  border-radius: 40px;
-} */
-
 .about-4 .video-box img {
   padding: 15px 0;
   border-radius: 15px;
@@ -332,6 +330,10 @@ Custom
   border-radius: 20px;
   border: 1px solid var(--color-primary-3);
   transition: 0.3s;
+  display: flex; /* Flexbox for aligning elements */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 }
 
 .about-4 .service-item:hover {
@@ -352,32 +354,16 @@ Custom
   width: 48px;
   height: 48px;
   position: relative;
-  margin-bottom: 50px;
-}
-
-.about-4 .service-item .icon i {
-  color: var(--color-default);
-  font-size: 56px;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
-  position: relative;
+  margin-bottom: 20px; /* Add space below the icon */
+  display: flex; /* Center icon horizontally and vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .about-4 .service-item .icon img {
   max-width: 65px;
-  filter: invert(7%) sepia(90%) saturate(100) hue-rotate(-8deg) brightness(96%) contrast(105%);
-}
-
-.about-4 .service-item .icon:before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 50px;
-  z-index: 1;
-  top: 10px;
-  right: -20px;
-  transition: 0.3s;
+  filter: invert(7%) sepia(90%) saturate(100) hue-rotate(-8deg)
+    brightness(96%) contrast(105%);
 }
 
 .about-4 .service-item h3 {
@@ -389,12 +375,14 @@ Custom
   position: relative;
   display: inline-block;
   transition: 0.3s;
+  text-align: center;
 }
 
 .about-4 .service-item p {
   line-height: 24px;
   margin-bottom: 0;
   font-size: var(--size-desktop);
+  text-align: center;
 }
 
 .about-4 .service-item .readmore {
@@ -415,8 +403,8 @@ Custom
 
   .about-4 .section-title-new h2 {
     text-align: left;
-    font-size: 27px;
-    line-height: 37px;
+    font-size: 30px;
+    line-height: 36px;
     margin: 0 10px;
     padding-bottom: 40px;
   }
@@ -437,7 +425,27 @@ Custom
   .about-4 {
     padding: 100px 15px;
   }
+
+  .about-4 .service-item .icon {
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
 }
+
+@media (max-width: 576px) {
+  .about-4 .section-title-new h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .about-4 .service-item h3 {
+    font-size: 18px;
+  }
+
+  .about-4 .service-item p {
+    font-size: 14px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 #.about-5
@@ -4181,6 +4189,10 @@ form.whatsapp-form {
   border-radius: 8px;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
   text-align: center;
+  display: flex; /* Use Flexbox for centering content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 }
 
 /* Text and icon styles */
@@ -4193,7 +4205,6 @@ form.whatsapp-form {
 
 /* Hover effects */
 .service-item:hover {
-  /*background: var(--color-secondary); Change background to green*/
   background-color: #fff !important;
   transform: translateY(-20px); /* Slight upward movement */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
@@ -4202,7 +4213,7 @@ form.whatsapp-form {
 .service-item:hover i,
 .service-item:hover h3,
 .service-item:hover p {
-  color: #000; /* Change text and icon color to black*/
+  color: #000; /* Change text and icon color to black */
 }
 
 /* Icon styles */
@@ -4222,14 +4233,142 @@ form.whatsapp-form {
   font-size: 14px;
   line-height: 1.5;
 }
-.icon{
-  color: #000; /* Change text and icon color to black */
-}
-.layanan-kita .service-item:hover  {
-  background-color: #fff !important;;
-}
-.layanan-kita .service-item:hover .icon img {
-  filter: invert(0%) sepia(8%) saturate(7469%) hue-rotate(300deg)
-    brightness(1%) contrast(110%);
+
+/* Ensure the icon is always centered */
+.icon, .icon-2 {
+  color: #000;
+  margin: 0 auto; /* Auto margins ensure centering */
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-item i {
+    font-size: 24px;
+  }
+
+  .service-item h4 {
+    font-size: 18px;
+  }
+
+  .service-item p {
+    font-size: 12px;
+  }
+}
+
+
+/* /////////////////// something about us //////////////////// */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.about-section {
+  padding: 50px 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container {
+  margin-bottom: 30px;
+}
+
+.image-container img {
+  max-width: 500px;
+  height: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.text-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  width: 100%;
+  color: white;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  flex: 1 1 calc(50% - 20px);
+  margin: 0;
+  text-align: justify;
+  color: white;
+  word-break: break-word;
+}
+
+/* @media (max-width: 768px) {
+  .text-container {
+    flex-direction: column;
+  }
+
+  .text-container p {
+    flex: 1 1 100%;
+    word-break: break-word;
+    justify-items:left;
+
+  }
+} */
+
+@media (max-width: 1024px) {
+  .text-container {
+    gap: 20px; /* Reduce gap for smaller devices */
+  }
+
+  .text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .text-container {
+    flex-direction: column;
+  }
+
+  .text-container p {
+    flex: 1 1 100%;
+    word-break: break-word;
+    font-size: 1rem;
+    line-height: 1.5;
+    /*text-align: left;  Align text to the left */
+    justify-items:left;
+  }
+}
+
+/* For small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    font-size: 0.95rem;
+    word-break: break-word;
+    justify-items:center;
+  }
+
+  .image-container img {
+    max-width: 100%; /* Ensure the image scales well */
+  }
+}
